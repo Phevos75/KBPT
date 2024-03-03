@@ -18,9 +18,28 @@ Run training in [wrapper.py](https://github.com/Phevos75/KBPT/blob/main/wrapper.
 
 ```
 python wrapper.py main \
---path_train outputs/data/splits/zero_rte/fewrel/unseen_10_seed_0/train.jsonl \                                       
---path_dev outputs/data/splits/zero_rte/fewrel/unseen_10_seed_0/dev.jsonl \                                           
---path_test outputs/data/splits/zero_rte/fewrel/unseen_10_seed_0/test.jsonl \                                         
+--path_train data/fewrel/unseen_10_seed_0/train.jsonl \                                       
+--path_dev data/fewrel/unseen_10_seed_0/dev.jsonl \                                           
+--path_test data/fewrel/unseen_10_seed_0/test.jsonl \                                         
 --save_dir outputs/wrapper/fewrel/unseen_10_seed_0 
-  
+
+```
+
+Run evaluation (Output single relation triplet)
+
+```
+python wrapper.py run_eval \                                                                                               
+--path_model outputs/wrapper/fewrel/unseen_10_seed_0/extractor_final \                                                  
+--path_test outputs/data/splits/zero_rte/fewrel/unseen_10_seed_0/test.jsonl \
+--mode single
+```
+
+Run evaluation (Out Multiple relation triplets)
+
+```
+python wrapper.py run_eval \                                                                                               
+--path_model wrapper/fewrel/unseen_10_seed_0/extractor_final \                                                  
+--path_test data/fewrel/unseen_10_seed_0/test.jsonl \
+--mode multi
+
 ```
