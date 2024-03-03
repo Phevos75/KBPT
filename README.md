@@ -12,3 +12,15 @@ The code of paper KBPT: Knowledge-Based Prompt Tuning for Zero-shot Relation Tri
   + Wiki-ZSL Pretrained Model (unseen=10, seed=0)
   + Tactred Pretrained Model (unseen=10, seed=0)
   + NYT Pretrained Model (unseen=10, seed=0)
+
+#  Experiment Scripts
+Run training in [wrapper.py](https://github.com/Phevos75/KBPT/blob/main/wrapper.py) (You can change "fewrel" to "wiki"、"Tactred"、"NYT" or unseen to 5/10/15 or seed to 0/1/2/3/4):
+
+```
+python wrapper.py main \
+--path_train outputs/data/splits/zero_rte/fewrel/unseen_10_seed_0/train.jsonl \                                       
+--path_dev outputs/data/splits/zero_rte/fewrel/unseen_10_seed_0/dev.jsonl \                                           
+--path_test outputs/data/splits/zero_rte/fewrel/unseen_10_seed_0/test.jsonl \                                         
+--save_dir outputs/wrapper/fewrel/unseen_10_seed_0 
+  
+```
