@@ -1,7 +1,7 @@
 # KBPT
 The code of paper KBPT: Knowledge-Based Prompt Tuning for Zero-shot Relation Triplet Extraction
 
-![image](https://github.com/Phevos75/KBPT/blob/main/Img/Figure-1.pdf)
+![Image text](https://github.com/Phevos75/KBPT/blob/main/Img/Figure-1.pdf)
 
 # Installation
 Python 3.7
